@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lezizidures · Booster culturel intelligent</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Lezizidures</p>
+        <h1>Votre booster quotidien de culture & curiosité.</h1>
+        <p class="subtitle">
+          Explorez l’art, la science, la philosophie et bien plus encore à travers des formats courts,
+          inspirants et personnalisés.
+        </p>
+      </div>
+      <div class="hero-card">
+        <p class="hero-title">Message du jour</p>
+        <p id="daily-message" class="hero-message"></p>
+        <button class="ghost" id="edit-preferences">Modifier mes préférences</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="preferences-title">
+        <div class="section-title">
+          <h2 id="preferences-title">Vos domaines privilégiés</h2>
+          <p>Contenus sélectionnés pour nourrir votre curiosité.</p>
+        </div>
+        <div id="preference-grid" class="card-grid"></div>
+      </section>
+
+      <section class="section" aria-labelledby="deep-dive-title">
+        <div class="section-title">
+          <h2 id="deep-dive-title">Découverte approfondie</h2>
+          <p>Concepts, faits marquants, recommandations et anecdotes pour aller plus loin.</p>
+        </div>
+        <div id="deep-dive-grid" class="card-grid"></div>
+      </section>
+
+      <section class="section" aria-labelledby="expand-title">
+        <div class="section-title">
+          <h2 id="expand-title">Élargir votre culture</h2>
+          <p>Chaque jour, un pas hors de votre zone de confort.</p>
+        </div>
+        <div id="expand-grid" class="card-grid"></div>
+      </section>
+
+      <section class="section" aria-labelledby="future-title">
+        <div class="section-title">
+          <h2 id="future-title">Prochaine étape</h2>
+          <p>Base prête pour connecter des APIs d’actualités et de contenus culturels.</p>
+        </div>
+        <div class="future">
+          <ul>
+            <li>Branche de données API (News, vidéos, podcasts, bibliothèques).</li>
+            <li>Moteur de recommandations contextualisé.</li>
+            <li>Profil utilisateur synchronisé multi-appareils.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="preference-modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h2 id="modal-title">Choisissez vos domaines favoris</h2>
+        <p>Sélectionnez 3 à 8 domaines pour personnaliser votre expérience.</p>
+      </div>
+      <div id="domain-grid" class="domain-grid"></div>
+      <div class="modal-actions">
+        <button class="ghost" id="reset-selection">Réinitialiser</button>
+        <button class="primary" id="save-selection">Valider mes préférences</button>
+      </div>
+      <p class="modal-footnote">Vous pourrez ajuster vos préférences à tout moment.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
